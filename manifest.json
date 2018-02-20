@@ -1,0 +1,27 @@
+{
+  "name": "Github Review Requests Counter",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "See how many opened pull requests that requested your review.",
+  "homepage_url": "https://github.com/ramytamer/github-review-requests-counter",
+  "icons": {
+    "32": "icons/github32.png",
+    "64": "icons/github64.png",
+    "120": "icons/github120.png"
+  },
+  "default_locale": "en",
+  "permissions": [
+    "https://github.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://github.com/*"
+      ],
+      "js": [
+        "js/favico.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
